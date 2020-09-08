@@ -31,7 +31,7 @@ function getInteresting(req) {
   } = headers;
 
   return {
-    // headers,
+    headers,
     host,
     accept,
     contentType:  headers['content-type'],

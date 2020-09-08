@@ -16,8 +16,9 @@ export default (req, res) => {
 
 function getInteresting(req) {
 
+  let   headers     = req.headers || {};
+
   const {
-    headers,
     url,
     method,
     cookies,
@@ -34,14 +35,14 @@ function getInteresting(req) {
     headers,
     host,
     accept,
-    contentType:  headers['content-type'],
-    acceptEncoding:  headers['accept-encoding'],
-    acceptLanguage:  headers['accept-language'],
+    contentType:      headers['content-type'],
+    acceptEncoding:   headers['accept-encoding'],
+    acceptLanguage:   headers['accept-language'],
     url,
     method,
     cookies,
     query,
-    body,
+    body  : body || {},
   };
   
 }
